@@ -1,7 +1,7 @@
 <p align="center"><a href="https://novoic.com"><img src="https://assets.novoic.com/logo_320px.png" alt="Novoic logo" width="160"/></a></p>
 
 # Novoic data engineering challenge
-This pipeline is used to classify Alzheimer's disease in various ways such as:
+This pipeline is used to create datasets to classify Alzheimer's disease in various ways such as:
 Classification of AD (Alzheimer's disease; status = 1) vs HC (healthy control, i.e. status = 0).
 Classification of AD-MCI (mild cognitive impairment due to Alzheimer's disease; status = 1 AND mmse > 26) vs HC.
 Classification of AD vs HC for patients in a certain age range. For example classification of AD vs HC for patients who are less than 60 years old (a loose proxy for preclinical Alzheimer’s).
@@ -11,6 +11,10 @@ Target 1: MMSE score between 20 and 24 -> Mild Dementia
 Target 2: MMSE score between 13 and 20 -> Moderate Dementia
 Target 3: MMSE score less than 13 -> Severe Dementia
 The feature set is created using both sound and audio for different types of targets shown above to build differnet products. 
+
+Files:
+utils.py -> Has two functions to convert text (.xml) and audio (.wav) files to features of (96x1) length arrays. 
+TARGETS.py -> A class to process targets into different datasets.
 
 Frameworks and Languages:
 The main language used to program this is Python using Spark framework. Pyspark is a wrapper for Spark which is used for distributed data processing. 
